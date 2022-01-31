@@ -1,6 +1,8 @@
+import chefPic from './images/chef.jpg';
 
 export default function renderMenu() {
 	const mainEl = document.getElementById('body');
+	mainEl.innerHTML = '';
 
 	const mainPageHeader = document.createElement('h2');
 	mainPageHeader.textContent = 'Menu';
@@ -11,7 +13,5 @@ export default function renderMenu() {
 	chef.src = chefPic;
 	mainEl.appendChild(chef);
 
-    document.body.appendChild(mainEl);
-
-    // should this function return or just do the rendering itself? -> does it even
+	// should this function return or just do the rendering itself? -> does it even
 }

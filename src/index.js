@@ -1,5 +1,6 @@
 import _, { head } from 'lodash';
 import './style.css';
+import chefPic from './images/chef.jpg'
 
 // Pages
 import renderHeader from './header';
@@ -13,24 +14,3 @@ import renderFooter from './footer';
     renderHome();
     renderFooter();
 })();
-
-
-
-
-function loadHome() {
-    renderHeader();
-    renderHome();
-    renderFooter();
-}
-
-function loadMenu() {
-    renderHeader();
-    renderHome();
-    renderFooter();
-}
-
-function loadContact() {
-    renderHeader();
-    renderHome();
-    renderFooter();
-}

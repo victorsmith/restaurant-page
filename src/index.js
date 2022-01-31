@@ -13,3 +13,24 @@ import renderFooter from './footer';
     renderHome();
     renderFooter();
 })();
+
+
+
+
+function loadHome() {
+    renderHeader();
+    renderHome();
+    renderFooter();
+}
+
+function loadMenu() {
+    renderHeader();
+    renderHome();
+    renderFooter();
+}
+
+function loadContact() {
+    renderHeader();
+    renderHome();
+    renderFooter();
+}

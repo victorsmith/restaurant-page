@@ -1,4 +1,10 @@
 import './style.css';
+// Pages
+import renderHeader from './header';
+import renderHome from './home.js';
+import renderMenu from './menu.js';
+import renderContact from './contact.js';
+import renderFooter from './footer';
 
 export default function renderNavBar() {
 	// header setup
@@ -16,15 +22,15 @@ export default function renderNavBar() {
 	const homeButton = document.createElement('button');
 	homeButton.textContent = 'Home';
 	homeButton.addEventListener('click', function () {
-		console.log('Home');
-	});
+        loadHome();
+    });
 	navbar.appendChild(homeButton);
 
 	// Menu Button
 	const menuButton = document.createElement('button');
 	menuButton.textContent = 'Menu';
 	menuButton.addEventListener('click', function () {
-		console.log('Menu');
+
 	});
 	navbar.appendChild(menuButton);
 
@@ -33,6 +39,7 @@ export default function renderNavBar() {
 	contactButton.textContent = 'Contact';
 	contactButton.addEventListener('click', function () {
 		console.log('Contact');
+        loadContact();
 	});
 	navbar.appendChild(contactButton);
 
@@ -45,4 +52,26 @@ export default function renderNavBar() {
 	mainEl.id = 'body';
 
 	document.body.appendChild(mainEl);
+}
+
+
+function loadHome() {
+    document.getElementById('body')
+    mainEl.innerHTML = '';
+	const homePage = renderHome();
+	mainEl.appendChild(homePage);
+}
+
+function loadMenu() {
+    document.getElementById('body');
+	mainEl.innerHTML = '';
+	const menuPage = renderMenu();
+	mainEl.appendChild(menuPage);
+}
+
+function loadContact() {
+    document.getElementById('body');
+	mainEl.innerHTML = '';
+	const contactPage = renderContact();
+	mainEl.appendChild(contactPage);
 }

@@ -1,4 +1,8 @@
+import './style.css';
 
 export default function renderHome() {
-    // code here
+	const mainPageHeader = document.createElement('h2');
+	mainPageHeader.textContent = 'Home';
+
+	document.body.appendChild(mainPageHeader);
 }

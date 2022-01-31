@@ -1,14 +1,14 @@
-export default function renderNavBar() {
-	const content = document.getElementById('content');
+import './style.css';
 
+export default function renderNavBar() {
 	// header setup
 	const headerEl = document.createElement('header');
-	
-    const mainHeading = document.createElement('h1');
+
+	const mainHeading = document.createElement('h1');
 	mainHeading.textContent = 'Food Inc.';
 	headerEl.appendChild(mainHeading);
 
-    // nav bar
+	// nav bar
 	const navbar = document.createElement('div');
 	navbar.classList.add('row');
 
@@ -35,7 +35,14 @@ export default function renderNavBar() {
 		console.log('Contact');
 	});
 	navbar.appendChild(contactButton);
-	
-    headerEl.appendChild(navbar)
-    content.appendChild(headerEl);
+
+	headerEl.appendChild(navbar);
+
+	document.body.appendChild(headerEl);
+
+	// append body of main so that menu/home/contact can find the #body element and post directly into it
+	const mainEl = document.createElement('main');
+	mainEl.id = 'body';
+
+	document.body.appendChild(mainEl);
 }
